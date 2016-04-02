@@ -158,9 +158,9 @@ public class DatebaseProvider extends ContentProvider {
       public Uri insert(Uri uri, ContentValues values) 用于添加数据到指定Uri的ContentProvider中。
       public int delete(Uri uri, String selection, String[] selectionArgs) 用于从指定Uri的ContentProvider中删除数据。
       public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) 用于更新
-指定Uri的ContentProvider中的数据。
+      指定Uri的ContentProvider中的数据。
       public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) 
-用于查询指定Uri的ContentProvider。
+      用于查询指定Uri的ContentProvider。
 
 ```java
 public class MainActivity extends Activity {

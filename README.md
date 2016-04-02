@@ -1,38 +1,40 @@
 # contentProvider
 
-* °²×¿ËÄ´ó×é¼şÖ®Ò»ContentProvider Ó¦ÓÃ·Ç³£¹ã·º£¬Ö»ÒªÓÃÓÚ¶ÁÈ¡ÏµÍ³µÄÁªÏµÈË¡¢Í¼¿âµÈ£¬µ÷ÓÃÏµÍ³µÄÊı¾İ·Ç³£¼òµ¥£¬
-Ö»ĞèÒªÏµÍ³µ÷ÏµÍ³µÄÌá¹©µÄURI£¬¼´¿É¶ÁÈ¡Êı¾İ¡£
-* ÔÚÊµ¼ÊµÄ¿ª·¢ÖĞContentProvider³öÀ´µ÷ÓÃÏµÍ³Êı¾İÍâ£¬µ÷ÓÃÆäËûÓ¦ÓÃ³ÌĞòµÄÊı¾İ±È½ÏÉÙ¼û¡£
+* å®‰å“å››å¤§ç»„ä»¶ä¹‹ä¸€ContentProvider åº”ç”¨éå¸¸å¹¿æ³›ï¼Œåªè¦ç”¨äºè¯»å–ç³»ç»Ÿçš„è”ç³»äººã€å›¾åº“ç­‰ï¼Œè°ƒç”¨ç³»ç»Ÿçš„æ•°æ®éå¸¸ç®€å•ï¼Œ
+åªéœ€è¦ç³»ç»Ÿè°ƒç³»ç»Ÿçš„æä¾›çš„URIï¼Œå³å¯è¯»å–æ•°æ®ã€‚
+* åœ¨å®é™…çš„å¼€å‘ä¸­ContentProviderå‡ºæ¥è°ƒç”¨ç³»ç»Ÿæ•°æ®å¤–ï¼Œè°ƒç”¨å…¶ä»–åº”ç”¨ç¨‹åºçš„æ•°æ®æ¯”è¾ƒå°‘è§ã€‚
 
-##¼ò½é
-ÄÚÈİÌá¹©Õß£¬Ö÷ÒªÓ¦ÓÃÓÚÊı¾İ¹²Ïí£¬Ìá¹©ÍêÕûÁË»úÖÆ£¬±£Ö¤ÁË¹²ÏíÊı¾İµÄ°²È«ĞÔ¡£
-
+##ç®€ä»‹
+å†…å®¹æä¾›è€…ï¼Œä¸»è¦åº”ç”¨äºæ•°æ®å…±äº«ï¼Œæä¾›å®Œæ•´äº†æœºåˆ¶ï¼Œä¿è¯äº†å…±äº«æ•°æ®çš„å®‰å…¨æ€§ã€‚
+æœ¬ä¾‹æœ‰ä¸¤ä¸ªå·¥ç¨‹ï¼Œ1.SqliteDatabase å·¥ç¨‹ï¼Œå®ƒä¸»è¦åŒ…æ‹¬provider å’Œprovideræ“ä½œçš„æ•°æ®åº“ã€‚
+      2.providertest å·¥ç¨‹ï¼Œå¯¹1å·¥ç¨‹çš„providerè¿›è¡Œäº†æ“ä½œã€‚
+## é¦–å…ˆæ¥ä»‹ç»ContentProvier
 ####uri 
-UriÖ¸¶¨ÁË½«Òª²Ù×÷µÄContentProvider£¬ÆäÊµ¿ÉÒÔ°ÑÒ»¸öUri¿´×÷ÊÇÒ»¸öÍøÖ·£¬ÎÒÃÇ°ÑUri·ÖÎªÈı²¿·Ö¡£
-µÚÒ»²¿·ÖÊÇ"content://"¡£¿ÉÒÔ¿´×÷ÊÇÍøÖ·ÖĞµÄ"http://"¡£
-µÚ¶ş²¿·ÖÊÇÖ÷»úÃû»òauthority£¬ÓÃÓÚÎ¨Ò»±êÊ¶Õâ¸öContentProvider£¬Íâ²¿Ó¦ÓÃĞèÒª¸ù¾İÕâ¸ö±êÊ¶À´ÕÒµ½Ëü¡£¿ÉÒÔ¿´×÷ÊÇÍøÖ·ÖĞµÄÖ÷»úÃû£¬±ÈÈç"blog.csdn.net"¡£
-µÚÈı²¿·ÖÊÇÂ·¾¶Ãû£¬ÓÃÀ´±íÊ¾½«Òª²Ù×÷µÄÊı¾İ¡£¿ÉÒÔ¿´×÷ÍøÖ·ÖĞÏ¸·ÖµÄÄÚÈİÂ·¾¶¡£
+UriæŒ‡å®šäº†å°†è¦æ“ä½œçš„ContentProviderï¼Œå…¶å®å¯ä»¥æŠŠä¸€ä¸ªUriçœ‹ä½œæ˜¯ä¸€ä¸ªç½‘å€ï¼Œæˆ‘ä»¬æŠŠUriåˆ†ä¸ºä¸‰éƒ¨åˆ†ã€‚
+* ç¬¬ä¸€éƒ¨åˆ†æ˜¯"content://"ã€‚å¯ä»¥çœ‹ä½œæ˜¯ç½‘å€ä¸­çš„"http://"ã€‚
+* ç¬¬äºŒéƒ¨åˆ†æ˜¯ä¸»æœºåæˆ–authorityï¼Œç”¨äºå”¯ä¸€æ ‡è¯†è¿™ä¸ªContentProviderï¼Œå¤–éƒ¨åº”ç”¨éœ€è¦æ ¹æ®è¿™ä¸ªæ ‡è¯†æ¥æ‰¾åˆ°å®ƒã€‚å¯ä»¥çœ‹ä½œæ˜¯ç½‘å€ä¸­çš„ä¸»æœºåï¼Œæ¯”å¦‚"blog.csdn.net"ã€‚
+* ç¬¬ä¸‰éƒ¨åˆ†æ˜¯è·¯å¾„åï¼Œç”¨æ¥è¡¨ç¤ºå°†è¦æ“ä½œçš„æ•°æ®ã€‚å¯ä»¥çœ‹ä½œç½‘å€ä¸­ç»†åˆ†çš„å†…å®¹è·¯å¾„ã€‚
 
 ####ContentProvider
-AndroidÌá¹©ÁËÒ»Ğ©Ö÷ÒªÊı¾İÀàĞÍµÄContentProvider£¬±ÈÈçÒôÆµ¡¢ÊÓÆµ¡¢Í¼Æ¬ºÍË½ÈËÍ¨Ñ¶Â¼µÈ¡£¿ÉÔÚandroid.provider°ü
-ÏÂÃæÕÒµ½Ò»Ğ©AndroidÌá¹©µÄContentProvider¡£Í¨¹ı»ñµÃÕâĞ©ContentProvider¿ÉÒÔ²éÑ¯ËüÃÇ°üº¬µÄÊı¾İ£¬µ±È»Ç°ÌáÊÇÒÑ»ñ
-µÃÊÊµ±µÄ¶ÁÈ¡È¨ÏŞ¡£
+Androidæä¾›äº†ä¸€äº›ä¸»è¦æ•°æ®ç±»å‹çš„ContentProviderï¼Œæ¯”å¦‚éŸ³é¢‘ã€è§†é¢‘ã€å›¾ç‰‡å’Œç§äººé€šè®¯å½•ç­‰ã€‚å¯åœ¨android.provideråŒ…
+ä¸‹é¢æ‰¾åˆ°ä¸€äº›Androidæä¾›çš„ContentProviderã€‚é€šè¿‡è·å¾—è¿™äº›ContentProviderå¯ä»¥æŸ¥è¯¢å®ƒä»¬åŒ…å«çš„æ•°æ®ï¼Œå½“ç„¶å‰ææ˜¯å·²è·
+å¾—é€‚å½“çš„è¯»å–æƒé™ã€‚
 
-public boolean onCreate() ÔÚ´´½¨ContentProviderÊ±µ÷ÓÃ
-public Cursor query(Uri, String[], String, String[], String) ÓÃÓÚ²éÑ¯Ö¸¶¨UriµÄContentProvider£¬·µ»ØÒ»¸öCursor
-public Uri insert(Uri, ContentValues) ÓÃÓÚÌí¼ÓÊı¾İµ½Ö¸¶¨UriµÄContentProviderÖĞ
-public int update(Uri, ContentValues, String, String[]) ÓÃÓÚ¸üĞÂÖ¸¶¨UriµÄContentProviderÖĞµÄÊı¾İ
-public int delete(Uri, String, String[]) ÓÃÓÚ´ÓÖ¸¶¨UriµÄContentProviderÖĞÉ¾³ıÊı¾İ
-public String getType(Uri) ÓÃÓÚ·µ»ØÖ¸¶¨µÄUriÖĞµÄÊı¾İµÄMIMEÀàĞÍ
-*Èç¹û²Ù×÷µÄÊı¾İÊôÓÚ¼¯ºÏÀàĞÍ£¬ÄÇÃ´MIMEÀàĞÍ×Ö·û´®Ó¦¸ÃÒÔvnd.android.cursor.dir/¿ªÍ·¡£
-ÀıÈç£ºÒªµÃµ½ËùÓĞperson¼ÇÂ¼µÄUriÎªcontent://contacts/person£¬ÄÇÃ´·µ»ØµÄMIMEÀàĞÍ×Ö·û´®Îª
-"vnd.android.cursor.dir/person"¡£
-*Èç¹ûÒª²Ù×÷µÄÊı¾İÊôÓÚ·Ç¼¯ºÏÀàĞÍÊı¾İ£¬ÄÇÃ´MIMEÀàĞÍ×Ö·û´®Ó¦¸ÃÒÔvnd.android.cursor.item/¿ªÍ·¡£
-ÀıÈç£ºÒªµÃµ½idÎª10µÄperson¼ÇÂ¼µÄUriÎªcontent://contacts/person/10£¬ÄÇÃ´·µ»ØµÄMIMEÀàĞÍ×Ö·û´®Ó¦
-Îª"vnd.android.cursor.item/person"¡£
+* public boolean onCreate() åœ¨åˆ›å»ºContentProvideræ—¶è°ƒç”¨
+* public Cursor query(Uri, String[], String, String[], String) ç”¨äºæŸ¥è¯¢æŒ‡å®šUriçš„ContentProviderï¼Œè¿”å›ä¸€ä¸ªCursor
+* public Uri insert(Uri, ContentValues) ç”¨äºæ·»åŠ æ•°æ®åˆ°æŒ‡å®šUriçš„ContentProviderä¸­
+* public int update(Uri, ContentValues, String, String[]) ç”¨äºæ›´æ–°æŒ‡å®šUriçš„ContentProviderä¸­çš„æ•°æ®
+* public int delete(Uri, String, String[]) ç”¨äºä»æŒ‡å®šUriçš„ContentProviderä¸­åˆ é™¤æ•°æ®
+* public String getType(Uri) ç”¨äºè¿”å›æŒ‡å®šçš„Uriä¸­çš„æ•°æ®çš„MIMEç±»å‹
+* å¦‚æœæ“ä½œçš„æ•°æ®å±äºé›†åˆç±»å‹ï¼Œé‚£ä¹ˆMIMEç±»å‹å­—ç¬¦ä¸²åº”è¯¥ä»¥vnd.android.cursor.dir/å¼€å¤´ã€‚
+ä¾‹å¦‚ï¼šè¦å¾—åˆ°æ‰€æœ‰personè®°å½•çš„Uriä¸ºcontent://contacts/personï¼Œé‚£ä¹ˆè¿”å›çš„MIMEç±»å‹å­—ç¬¦ä¸²ä¸º
+"vnd.android.cursor.dir/person"ã€‚
+* å¦‚æœè¦æ“ä½œçš„æ•°æ®å±äºéé›†åˆç±»å‹æ•°æ®ï¼Œé‚£ä¹ˆMIMEç±»å‹å­—ç¬¦ä¸²åº”è¯¥ä»¥vnd.android.cursor.item/å¼€å¤´ã€‚
+ä¾‹å¦‚ï¼šè¦å¾—åˆ°idä¸º10çš„personè®°å½•çš„Uriä¸ºcontent://contacts/person/10ï¼Œé‚£ä¹ˆè¿”å›çš„MIMEç±»å‹å­—ç¬¦ä¸²åº”
+ä¸º"vnd.android.cursor.item/person"ã€‚
 
 
-Ö±½ÓÉÏ´úÂë£º±¾Àı×Ó£¬²ÉÓÃÄÚÈİÌá¹©Õß¹²ÏísqliteµÄÊı¾İ¿â¡£
+ç›´æ¥ä¸Šä»£ç ï¼šæœ¬ä¾‹å­ï¼Œé‡‡ç”¨å†…å®¹æä¾›è€…å…±äº«sqliteçš„æ•°æ®åº“ã€‚
 ```java
 public class DatebaseProvider extends ContentProvider {
 
@@ -146,19 +148,19 @@ public class DatebaseProvider extends ContentProvider {
 ```
 
 ####ContentResolver 
-µ±Íâ²¿Ó¦ÓÃĞèÒª¶ÔContentProviderÖĞµÄÊı¾İ½øĞĞÌí¼Ó¡¢É¾³ı¡¢ĞŞ¸ÄºÍ²éÑ¯²Ù×÷Ê±£¬¿ÉÒÔÊ¹ÓÃContentResolverÀàÀ´Íê³É£¬
-Òª»ñÈ¡ContentResolver¶ÔÏó£¬¿ÉÒÔÊ¹ÓÃContextÌá¹©µÄgetContentResolver()·½·¨¡£
+å½“å¤–éƒ¨åº”ç”¨éœ€è¦å¯¹ContentProviderä¸­çš„æ•°æ®è¿›è¡Œæ·»åŠ ã€åˆ é™¤ã€ä¿®æ”¹å’ŒæŸ¥è¯¢æ“ä½œæ—¶ï¼Œå¯ä»¥ä½¿ç”¨ContentResolverç±»æ¥å®Œæˆï¼Œ
+è¦è·å–ContentResolverå¯¹è±¡ï¼Œå¯ä»¥ä½¿ç”¨Contextæä¾›çš„getContentResolver()æ–¹æ³•ã€‚
 
-[java] view plain copy
-ContentResolver cr = getContentResolver();  
 
-ContentResolverÌá¹©µÄ·½·¨ºÍContentProviderÌá¹©µÄ·½·¨¶ÔÓ¦µÄÓĞÒÔÏÂ¼¸¸ö·½·¨¡£
-public Uri insert(Uri uri, ContentValues values) ÓÃÓÚÌí¼ÓÊı¾İµ½Ö¸¶¨UriµÄContentProviderÖĞ¡£
-public int delete(Uri uri, String selection, String[] selectionArgs) ÓÃÓÚ´ÓÖ¸¶¨UriµÄContentProviderÖĞÉ¾³ıÊı¾İ¡£
-public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) ÓÃÓÚ¸üĞÂ
-Ö¸¶¨UriµÄContentProviderÖĞµÄÊı¾İ¡£
-public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) 
-ÓÃÓÚ²éÑ¯Ö¸¶¨UriµÄContentProvider¡£
+      ContentResolver cr = getContentResolver();  
+      
+      ContentResolveræä¾›çš„æ–¹æ³•å’ŒContentProvideræä¾›çš„æ–¹æ³•å¯¹åº”çš„æœ‰ä»¥ä¸‹å‡ ä¸ªæ–¹æ³•ã€‚
+      public Uri insert(Uri uri, ContentValues values) ç”¨äºæ·»åŠ æ•°æ®åˆ°æŒ‡å®šUriçš„ContentProviderä¸­ã€‚
+      public int delete(Uri uri, String selection, String[] selectionArgs) ç”¨äºä»æŒ‡å®šUriçš„ContentProviderä¸­åˆ é™¤æ•°æ®ã€‚
+      public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) ç”¨äºæ›´æ–°
+æŒ‡å®šUriçš„ContentProviderä¸­çš„æ•°æ®ã€‚
+      public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) 
+ç”¨äºæŸ¥è¯¢æŒ‡å®šUriçš„ContentProviderã€‚
 
 ```java
 public class MainActivity extends Activity {
@@ -195,7 +197,7 @@ public class MainActivity extends Activity {
                     while (cursor.moveToNext()) {
                        String name =cursor.getString(cursor.getColumnIndex("name"));
                        String author =cursor.getString(cursor.getColumnIndex("author"));
-                       Toast.makeText(getApplicationContext(), "Ãû×Ö:"+name+"--"+"×÷Õß:"+author, Toast.LENGTH_LONG).show();
+                       Toast.makeText(getApplicationContext(), "åå­—:"+name+"--"+"ä½œè€…:"+author, Toast.LENGTH_LONG).show();
                         
                     }
                 }
@@ -210,21 +212,21 @@ public class MainActivity extends Activity {
 
 ```
 
-# ±¾ÀıÖĞÓÃÁËSqliteDatabase
-½éÉÜÏÂsqlitedatabase
+# æœ¬ä¾‹ä¸­ç”¨äº†SqliteDatabase
+ä»‹ç»ä¸‹sqlitedatabase
 
 ####SQLiteOpenHelper
 
-¸ÃÀàÊÇSQLiteDatabaseÒ»¸ö¸¨ÖúÀà¡£Õâ¸öÀàÖ÷ÒªÉú³ÉÒ»  ¸öÊı¾İ¿â£¬²¢¶ÔÊı¾İ¿âµÄ°æ±¾½øĞĞ¹ÜÀí¡£µ±ÔÚ³ÌĞòµ±ÖĞµ÷ÓÃÕâ¸öÀàµÄ·½·¨getWritableDatabase()»òÕß getReadableDatabase()·½·¨µÄÊ±ºò£¬Èç¹ûµ±Ê±Ã»ÓĞÊı¾İ£¬ÄÇÃ´AndroidÏµÍ³¾Í»á×Ô¶¯Éú³ÉÒ»¸öÊı¾İ¿â¡£ SQLiteOpenHelper ÊÇÒ»¸ö³éÏóÀà£¬ÎÒÃÇÍ¨³£ĞèÒª¼Ì³ĞËü£¬²¢ÇÒÊµÏÖÀïÃæµÄ3¸öº¯Êı£º
+è¯¥ç±»æ˜¯SQLiteDatabaseä¸€ä¸ªè¾…åŠ©ç±»ã€‚è¿™ä¸ªç±»ä¸»è¦ç”Ÿæˆä¸€  ä¸ªæ•°æ®åº“ï¼Œå¹¶å¯¹æ•°æ®åº“çš„ç‰ˆæœ¬è¿›è¡Œç®¡ç†ã€‚å½“åœ¨ç¨‹åºå½“ä¸­è°ƒç”¨è¿™ä¸ªç±»çš„æ–¹æ³•getWritableDatabase()æˆ–è€… getReadableDatabase()æ–¹æ³•çš„æ—¶å€™ï¼Œå¦‚æœå½“æ—¶æ²¡æœ‰æ•°æ®ï¼Œé‚£ä¹ˆAndroidç³»ç»Ÿå°±ä¼šè‡ªåŠ¨ç”Ÿæˆä¸€ä¸ªæ•°æ®åº“ã€‚ SQLiteOpenHelper æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œæˆ‘ä»¬é€šå¸¸éœ€è¦ç»§æ‰¿å®ƒï¼Œå¹¶ä¸”å®ç°é‡Œé¢çš„3ä¸ªå‡½æ•°ï¼š
 
-1.onCreate£¨SQLiteDatabase£©
+      1.onCreateï¼ˆSQLiteDatabaseï¼‰
 
-ÔÚÊı¾İ¿âµÚÒ»´ÎÉú³ÉµÄÊ±ºò»áµ÷ÓÃÕâ¸ö·½·¨£¬Ò²¾ÍÊÇËµ£¬Ö»ÓĞÔÚ´´½¨Êı¾İ¿âµÄÊ±ºò²Å»áµ÷ÓÃ£¬µ±È»Ò²ÓĞÒ»Ğ©ÆäËüµÄÇé¿ö£¬Ò»°ãÎÒÃÇÔÚÕâ¸ö·½·¨Àï±ßÉú³ÉÊı¾İ¿â±í¡£
+åœ¨æ•°æ®åº“ç¬¬ä¸€æ¬¡ç”Ÿæˆçš„æ—¶å€™ä¼šè°ƒç”¨è¿™ä¸ªæ–¹æ³•ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œåªæœ‰åœ¨åˆ›å»ºæ•°æ®åº“çš„æ—¶å€™æ‰ä¼šè°ƒç”¨ï¼Œå½“ç„¶ä¹Ÿæœ‰ä¸€äº›å…¶å®ƒçš„æƒ…å†µï¼Œä¸€èˆ¬æˆ‘ä»¬åœ¨è¿™ä¸ªæ–¹æ³•é‡Œè¾¹ç”Ÿæˆæ•°æ®åº“è¡¨ã€‚
 
-2.  onUpgrade£¨SQLiteDatabase£¬int£¬int£© 
-µ±Êı¾İ¿âĞèÒªÉı¼¶µÄÊ±ºò£¬AndroidÏµÍ³»áÖ÷¶¯µÄµ÷ÓÃÕâ¸ö·½·¨¡£Ò»°ãÎÒÃÇÔÚÕâ¸ö·½·¨Àï±ßÉ¾³ıÊı¾İ±í£¬²¢½¨Á¢ĞÂµÄÊı¾İ±í£¬µ±È»ÊÇ·ñ»¹ĞèÒª×öÆäËûµÄ²Ù×÷£¬ÍêÈ«È¡¾öÓÚÓ¦ÓÃµÄĞèÇó¡£
+      2.  onUpgradeï¼ˆSQLiteDatabaseï¼Œintï¼Œintï¼‰ 
+å½“æ•°æ®åº“éœ€è¦å‡çº§çš„æ—¶å€™ï¼ŒAndroidç³»ç»Ÿä¼šä¸»åŠ¨çš„è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚ä¸€èˆ¬æˆ‘ä»¬åœ¨è¿™ä¸ªæ–¹æ³•é‡Œè¾¹åˆ é™¤æ•°æ®è¡¨ï¼Œå¹¶å»ºç«‹æ–°çš„æ•°æ®è¡¨ï¼Œå½“ç„¶æ˜¯å¦è¿˜éœ€è¦åšå…¶ä»–çš„æ“ä½œï¼Œå®Œå…¨å–å†³äºåº”ç”¨çš„éœ€æ±‚ã€‚
 
-3.  onOpen£¨SQLiteDatabase£©£º
+      3.  onOpenï¼ˆSQLiteDatabaseï¼‰ï¼š
 
 ```java
 public class MyDatabaseHelper extends SQLiteOpenHelper{
@@ -253,15 +255,15 @@ public class MyDatabaseHelper extends SQLiteOpenHelper{
 
 ```
 
-####SQLiteDatabase µÄCURD
-*  sqliteHelper µÄgetWritableDatabase()»òÕßgetReadableDatabase ÓÃÓÚ´´½¨»òÕßÉı¼¶Êı¾İ¿â£¬²»½öÈç´Ë
-»¹»á·µ»ØsqliteDatabase¶ÔÏó¡£
-* Ôö¼Ó¡£Ö»Ğèinsert·½·¨£¬ĞèÒªÈı¸ö²ÎÊı£¬µÚÒ»¸ö²ÎÊı±íÃû£¬µÚ¶ş¸ö²ÎÊıÒ»°ãÓÃ²»ÉÏÖ±½Ónull£¬µÚÈı¸ö²ÎÊıContentValues¶ÔÏó
-* ¸üĞÂ¡£update()
-* É¾³ı delete £¨£©
-* ²éÑ¯ query() ·µ»ØCursor¶ÔÏó   String name=cursor.getString(cursor.getColumnIndex("name"));  while(cursor.hasNext()){}
+####SQLiteDatabase çš„CURD
+*  sqliteHelper çš„getWritableDatabase()æˆ–è€…getReadableDatabase ç”¨äºåˆ›å»ºæˆ–è€…å‡çº§æ•°æ®åº“ï¼Œä¸ä»…å¦‚æ­¤
+è¿˜ä¼šè¿”å›sqliteDatabaseå¯¹è±¡ã€‚
+* å¢åŠ ã€‚åªéœ€insertæ–¹æ³•ï¼Œéœ€è¦ä¸‰ä¸ªå‚æ•°ï¼Œç¬¬ä¸€ä¸ªå‚æ•°è¡¨åï¼Œç¬¬äºŒä¸ªå‚æ•°ä¸€èˆ¬ç”¨ä¸ä¸Šç›´æ¥nullï¼Œç¬¬ä¸‰ä¸ªå‚æ•°ContentValueså¯¹è±¡
+* æ›´æ–°ã€‚update()
+* åˆ é™¤ delete ï¼ˆï¼‰
+* æŸ¥è¯¢ query() è¿”å›Cursorå¯¹è±¡   String name=cursor.getString(cursor.getColumnIndex("name"));  while(cursor.hasNext()){}
   
-*  Ö±½ÓÓÃexecSql();
+*  ç›´æ¥ç”¨execSql();
 *  db.rawQuery("select * from Book",null);
 
 
